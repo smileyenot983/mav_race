@@ -1,0 +1,786 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://asphalt_plane</uri>
+    </include>
+
+    <model name='aruco_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 4 0 0 1.57</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 1'>
+      <static>1</static>
+      <pose>0 0 0 0 -0 0</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <model name='aruco_2'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 4 4 0 0 1.57</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 2'>
+      <static>1</static>
+      <pose>0 4 0 0 -0 0</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <model name='aruco_3'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>2 6 4 0 0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 3'>
+      <static>1</static>
+      <pose>2 6 0 0 -0 1.57</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <model name='aruco_4'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>6 6 4 0 0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 4'>
+      <static>1</static>
+      <pose>6 6 0 0 -0 1.57</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <model name='aruco_5'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>8 4 4 0 0 -1.57</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 5'>
+      <static>1</static>
+      <pose>8 4 0 0 -0 0</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <model name='aruco_6'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>8 0 4 0 0 -1.57</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 6'>
+      <static>1</static>
+      <pose>8 0 0 0 -0 0</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <model name='aruco_7'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>6 -2 4 0 0 3.14</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 7'>
+      <static>1</static>
+      <pose>6 -2 0 0 -0 1.57</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <model name='aruco_8'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>2 -2 4 0 0 3.14</pose>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.015 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://aruco_4x4_7/materials/scripts</uri>
+              <uri>model://aruco_4x4_7/materials/textures</uri>
+              <name>aruco_4x4_7/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='aruco_frame'>
+          <pose frame=''>-0.001 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.015 0.65 0.65</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </model>
+
+    <model name='gate 8'>
+      <static>1</static>
+      <pose>2 -2 0 0 -0 1.57</pose>
+      <link name='dronerace gate 2018'>
+        <visual name='gate'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='gate_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://dronerace_gate_2018/normal_gate_2018.dae</uri>
+              <scale>1.2 1.2 1.2</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+
+    <!-- Only one ROS interface plugin is required per world, as any other plugin can connect a Gazebo
+         topic to a ROS topic (or vise versa). -->
+    <plugin name="ros_interface_plugin" filename="librotors_gazebo_ros_interface_plugin.so"/>
+
+    <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.002</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>500</real_time_update_rate>
+      <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    </physics>
+  </world>
+</sdf>
